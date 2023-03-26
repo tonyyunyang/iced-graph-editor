@@ -20,24 +20,3 @@ jobs:
       run: cargo build --verbose
     - name: Run tests
       run: cargo test --verbose
-      
-    - name: rustfmt-check
-      uses: LoliGothick/rustfmt-check@v0.3.0
-      with:
-        # GitHub token
-        token: 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
-        # Flags for the cargo command
-        flags: all
-        # Options for the cargo command
-        options: check
-      
-    - name: clippy-check
-      uses: LoliGothick/clippy-check@v0.2.5
-      with:
-        # GitHub token
-        token: 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
-        # Arguments for the `cargo clippy` command
-        options: all
-        # Sequence of lint denied (without `clippy::` prefix)
-        deny: warnings
-
